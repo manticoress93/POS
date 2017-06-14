@@ -1,0 +1,19 @@
+﻿<Window x:Class="PongGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PongGame"
+        mc:Ignorable="d"
+        KeyDown="MainWindow_OnKeyDown"
+        Title="PongGame" Height="475" Width="800" ResizeMode="NoResize">
+    <Canvas Name="MainCanvas" Background="#000000" Margin="0,0">
+        <Line X1="400" X2="400" Y2="475" Y1="0" StrokeThickness="2" Stroke="#FFFFFF" Height="445"/>
+        <Rectangle Height="80" Width="15" Fill="#c0c0c0" Canvas.Left="765" Name="RightPad" Canvas.Top="{Binding YPosition}" />
+        <Rectangle Height="80" Width="15" Fill="#c0c0c0" Canvas.Left="10" Name="LeftPad" Canvas.Top="{Binding YPosition}" />
+        <Ellipse Width="15" Height="15" Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}" Name="Ball" DataContext="{Binding Path=ball}" StrokeThickness="0.1" Fill="#FFFFFF"/>
+        <Label Canvas.Left="50" Canvas.Top="20" Content="{Binding LeftResult}" Height="auto" Name="LeftResultLabel" FontSize="40" Foreground="#FFFFFF"/>
+        <Label Canvas.Right="50" Canvas.Top="20" Content="{Binding RightResult}" Height="auto" Name="RightResultLabel" FontSize="40" Foreground="#FFFFFF"/>
+    </Canvas>
+
+</Window>
