@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PongGame
 {
-    class Ball : INotifyPropertyChanged
+    public class Ball : INotifyPropertyChanged
     {
         private double _x;
         private double _y;
